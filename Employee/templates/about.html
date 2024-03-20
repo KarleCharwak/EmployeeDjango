@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Employee Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        ul li::before {
+            content: "\2022";
+            color: #007bff;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+        a {
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: none;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        <h1 class="mt-4 mb-4">About Employee Management System</h1>
+        <p>This Employee Management System is a web application built using Django, a high-level Python web framework. It allows organizations to manage their employee data efficiently, including information such as first name, last name, ID, gender, hiring date, department, manager, and salary.</p>
+        
+        <h2 class="mt-4 mb-4">Features:</h2>
+        <ul>
+            <li>User-friendly interface for managing employee data.</li>
+            <li>Secure authentication system for administrators.</li>
+            <li>Integration with Bootstrap for a modern and responsive design.</li>
+            <li>Support for adding, editing, and deleting employee records.</li>
+            <li>Ability to view employee data in a table format.</li>
+        </ul>
+
+        <h2 class="mt-4 mb-4">Technologies Used:</h2>
+        <ul>
+            <li>Django: Python web framework</li>
+            <li>Bootstrap: Front-end framework</li>
+            <li>SQLite: Relational database management system</li>
+            <!-- Add more technologies as needed -->
+        </ul>
+
+        <p>For more information or to contribute to the project, visit the GitHub repository: <a href="https://github.com/your-username/employee-management-system">Employee Management System</a></p>
+    </div>
+
+    <!-- Bootstrap JS (optional, if you need to use Bootstrap's JavaScript components) -->
+    <!-- Note: You may need to include jQuery and Popper.js if you are using Bootstrap's JavaScript components -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

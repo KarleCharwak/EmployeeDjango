@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles here if needed */
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        <h1 class="mt-4 mb-4">Employee List</h1>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID</th>
+                    <th>Gender</th>
+                    <th>Hiring Date</th>
+                    <th>Department</th>
+                    <th>Manager</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                <tr>
+                    <td>{{ employee.first_name }}</td>
+                    <td>{{ employee.last_name }}</td>
+                    <td>{{ employee.id_number }}</td>
+                    <td>{{ employee.gender }}</td>
+                    <td>{{ employee.hiring_date }}</td>
+                    <td>{{ employee.department.name }}</td>
+                    <td>{{ employee.manager.name }}</td>
+                    <td>{{ employee.salary.amount }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="card text-center">
+			
+        <div class="card-body">
+          <h6 class="card-title" >Developed by</h6>
+          </h5>
+          <h5>Karle Charwak Madhav</h5>
+          
+        </div>
+        
+      </div>
+
+
+    <!-- Bootstrap JS (optional, if you need to use Bootstrap's JavaScript components) -->
+    <!-- Note: You may need to include jQuery and Popper.js if you are using Bootstrap's JavaScript components -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
